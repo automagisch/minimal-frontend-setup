@@ -9,6 +9,11 @@ class Utilities {
     return `${dir}/${file}`;
   }
 
+  // mapping to a dependency in node_modules
+  static dep(pkgPath = '/node_modules') {
+    return Utilities.cwd(`node_modules/${pkgPath}`);
+  }
+
   // writeBuffer shortcut as a promise
   static writeBuffer(output, buffer) {
     return new Promise((resolve, reject) => {

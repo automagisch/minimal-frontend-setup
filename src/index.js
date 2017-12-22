@@ -18,7 +18,10 @@ watchStyles({
   output: 'static/css/styles.css',
   sass: {
     sourceMap: true,
-    sourceMapContents: true
+    sourceMapContents: true,
+    includePaths: [
+      // example: util.dep('font-awesome/scss')
+    ]
   }
 });
 
