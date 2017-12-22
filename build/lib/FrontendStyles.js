@@ -82,22 +82,6 @@ function compile() {
         }, function (err) {
           reject(err);
         });
-
-        // // writes the .css file
-        // fs.writeFile(util.cwd(output), result.css, err => {
-        //   if(err) {
-        //     reject(err);
-        //     return;
-        //   }
-        //   // writes the .css.map file
-        //   fs.writeFile(util.cwd(`${output}.map`), result.map, err => {
-        //     if(err) {
-        //       reject(err);
-        //       return;
-        //     }
-        //     resolve(result);
-        //   });
-        // });
       }
     });
   });

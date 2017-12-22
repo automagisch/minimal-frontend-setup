@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir build",
+    "build": "rimraf build && babel src --out-dir build",
     "start": "nodemon --delay 2 --exec babel-node index.js",
     "prod": "npm run build && node index.js"
   },
@@ -21,6 +21,7 @@
     "chokidar": "^1.7.0",
     "exorcist": "^1.0.0",
     "express": "^4.16.2",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "rimraf": "^2.6.2"
   }
 }
