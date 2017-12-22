@@ -1,0 +1,13 @@
+{
+  "quiet": false,
+  "verbose": false,
+  "ignore": [
+    "node_modules",
+    "static",
+    "build"
+  ],
+  "watch": [
+    "src",
+    "index.js"
+  ]
+}
