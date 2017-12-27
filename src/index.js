@@ -5,6 +5,7 @@ import { util } from './lib/Utilities';
 import { config as appConfig, routes, api } from './app';
 
 // configure and start the server
+// info: appConfig, routes and api configuration is located in app.js
 const server = new Server();
 server.configure(appConfig);
 server.routes(routes);

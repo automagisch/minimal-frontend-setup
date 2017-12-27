@@ -13,6 +13,9 @@ import { util } from './lib/Utilities';
   function, such as linking to your static folder or setting
   up template renderers.
 
+  Express docs:
+  - http://expressjs.com/en/4x/api.html#express
+
 ========================================================== */
 function config(app) {
 
@@ -32,6 +35,9 @@ function config(app) {
   Configure any express-related configurations in this
   function, such as linking to your static folder or setting
   up template renderers.
+
+  Express.Router docs:
+  - http://expressjs.com/en/4x/api.html#router
 
 ========================================================== */
 function routes(app) {
@@ -66,6 +72,9 @@ function routes(app) {
   get automatically mapped to `/api/{endpoint}`. it needs to
   return the router because it is passed in as middleware.
 
+  Some guidance on this subject:
+  - https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
+
 ========================================================== */
 function api(router) {
 
@@ -83,9 +92,17 @@ function api(router) {
 
 
 
-export { config, routes, api };
 
-// utility function for parsing html files to buffers
+/* ==========================================================
+
+  Utility function for parsing static html files and send
+  them to the frontend with the express.send method.
+
+  BUT! Express can do more with templates, more info on template management
+  (e.g if you want to use Pug or EJS to support template variables):
+  - http://expressjs.com/en/guide/using-template-engines.html
+
+========================================================== */
 function getHTML(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(util.cwd(path), (err, result) => {
@@ -97,3 +114,10 @@ function getHTML(path) {
     });
   });
 }
+
+
+
+
+
+// export everything
+export { config, routes, api };
